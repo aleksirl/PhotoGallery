@@ -7,12 +7,10 @@ import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.GridLayoutManager
 import com.bignerdranch.android.photogallery.databinding.FragmentPhotoGalleryBinding
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 
@@ -66,7 +64,7 @@ class PhotoGalleryFragment: Fragment() {
         super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.fragment_photo_gallery, menu)
 
-        val searchItem: MenuItem = menu.findItem(R.id.menu_item_clear)
+        val searchItem: MenuItem = menu.findItem(R.id.menu_item_search)
         val searchView = searchItem.actionView as? SearchView
 
         searchView?.setOnQueryTextListener(object : SearchView.OnQueryTextListener{

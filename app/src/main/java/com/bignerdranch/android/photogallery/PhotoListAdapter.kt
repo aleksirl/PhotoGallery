@@ -13,9 +13,10 @@ class PhotoViewHolder(private val binding: ListItemGalleryBinding
             binding.itemImageView.load(galleryItem.url){
                 placeholder(R.drawable.bill_up_close)
             }
-
         }
 
+
+    // GalleryItem("Alice", "32", "https://somesite.ru/girls.jpeg")
 }
 
 class PhotoListAdapter(private val galleryItem: List<GalleryItem>): RecyclerView.Adapter<PhotoViewHolder>(){
